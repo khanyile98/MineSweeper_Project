@@ -1,12 +1,18 @@
 import databaseHandler
+import getpass
 
 
 def details():
+    """
+    * This function takes in user information for creation of a new profile
+    * This information is then safely stored in the database
+    """
+    
     username = input('Enter a username: ')
     
     while True:
-        password = input('Enter password: ')
-        password_again = input("Re-enter the password: ")
+        password = getpass.getpass('Enter password: ')
+        password_again = getpass.getpass("Re-enter the password: ")
 
         if password == password_again:
             return username, password

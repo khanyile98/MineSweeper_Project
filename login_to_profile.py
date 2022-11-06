@@ -1,8 +1,16 @@
 import databaseHandler
+import getpass
 
 def enter_details():
+    """
+    * This function askes the user for their profile login details.
+    * If the details are correct they will then play the game
+    * If not, they will be asked if they want to try again or
+    would prefer making a new profle
+    """
+
     username = input('Username: ')
-    password = input("Password: ")
+    password = getpass.getpass(prompt="Password: ", stream=None)
 
     print("".center(40, '*'))
     print()
